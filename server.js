@@ -15,6 +15,10 @@ app.use(express.static('public'));
 
 app.use('/scripts', express.static(`${__dirname}/node_modules/`));
 
+// Redirect all traffic to index.html
+
+app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
+
 // Listen for HTTP requests on port 3000
 
 app.listen(port, () => {
