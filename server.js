@@ -3,6 +3,7 @@ require('dotenv').config();
 // read .env files
 
 const express = require('express');
+const { getRates } = require('./lib/fixer-service');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -24,3 +25,10 @@ app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
 app.listen(port, () => {
   console.log('listening on %d', port);
 });
+
+const test = async () => {
+  const data = await getRates();
+  console.log(data);
+};
+
+test();
