@@ -21,6 +21,7 @@
     "handlebars": "^4.1.2",
     "jquery": "^3.4.1",
     "nodemon": "^1.19.1",
+    "semantic-ui-calendar": "0.0.8",
     "semantic-ui-css": "^2.4.1",
     "vanilla-router": "^1.2.7"
   }
